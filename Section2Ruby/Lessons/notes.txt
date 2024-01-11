@@ -1,0 +1,8 @@
+class = blueprint
+
+Ctrl + ] => adds two spaces
+Ctrl + [ => removes two spaces
+
+  def self.create_hash_digest(password) #self mean class method, does not require an instance of object
+    BCrypt::Password.create(password)
+  end

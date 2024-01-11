@@ -1,10 +1,3 @@
-# require 'bundler/inline'
-
-# gemfile true do
-#   source 'http://rubygems.org'
-#   gem 'bcrypt'
-# end
-
 module Crud
   require 'bcrypt'
   puts "Module CRUD activated"
@@ -34,9 +27,3 @@ module Crud
     "Credentails invalid"
   end
 end
-
-
-# new_users = create_secure_users(users)
-# puts new_users
-# puts authenticate_user("timmy", "password2", new_users)
-# puts authenticate_user("timmy", "bad_password", new_users)
