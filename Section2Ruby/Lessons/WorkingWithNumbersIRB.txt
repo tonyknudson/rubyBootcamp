@@ -1,0 +1,31 @@
+$ irb
+irb(main):001:0> 1 + 2
+=> 3
+irb(main):002:0> 10 * 2
+=> 20
+irb(main):003:0> 10 / 4       #Integer truncation
+=> 2
+irb(main):004:0> 10.0 / 4     #Conver 10 to Float
+=> 2.5
+irb(main):008:0> 10 / 4.to_f  #Convert 4 to Float
+=> 2.5
+irb(main):009:0> (10 / 4).to_f #Integer truncation
+=> 2.0
+
+
+
+
+irb(main):010:0> "5" * "5"
+(irb):10:in `*': no implicit conversion of String into Integer (TypeError)
+        from (irb):10:in `<main>'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/irb-1.6.2/exe/irb:11:in `<top (required)>'
+        from C:/Ruby32-x64/bin/irb:33:in `load'
+        from C:/Ruby32-x64/bin/irb:33:in `<main>'
+irb(main):011:0> "5" * 2
+=> "55"
+irb(main):012:0> 2 * "5"
+(irb):12:in `*': String can't be coerced into Integer (TypeError)
+        from (irb):12:in `<main>'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/irb-1.6.2/exe/irb:11:in `<top (required)>'
+        from C:/Ruby32-x64/bin/irb:33:in `load'
+        from C:/Ruby32-x64/bin/irb:33:in `<main>'

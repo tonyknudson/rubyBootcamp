@@ -1,0 +1,51 @@
+#Hash aka dictionary
+
+irb(main):036:0> sample_hash                            #hash using strings as keys
+=> {"a"=>1, "b"=>2, "c"=>3}
+irb(main):037:0> another_hash = {a: 1, b: 2, c: 3}      #hash using SYMBOLS as keys, used often in rails examples - [:session_id], [:user_id], [:username]
+=> {:a=>1, :b=>2, :c=>3}
+
+irb(main):038:0> another_hash[:a]                       #retrieve the value (1) for key symbol [:a]
+=> 1
+
+irb(main):039:0> sample_hash.keys
+=> ["a", "b", "c"]
+irb(main):040:0> sample_hash.values
+=> [1, 2, 3]
+
+irb(main):041:1* sample_hash.each do |key, value|
+irb(main):042:1*   puts "The key class is #{key.class} and the value is #{value.class}"
+irb(main):043:0> end
+The key class is String and the value is Integer
+The key class is String and the value is Integer
+The key class is String and the value is Integer
+=> {"a"=>1, "b"=>2, "c"=>3}
+
+irb(main):044:0> my_hash = {a: 1, b: 2, c: 3, d: 4}
+=> {:a=>1, :b=>2, :c=>3, :d=>4}
+
+irb(main):045:0> my_hash[:e] = "Knox"
+=> "Knox"
+irb(main):046:0> p my_hash
+{:a=>1, :b=>2, :c=>3, :d=>4, :e=>"Knox"}
+=> {:a=>1, :b=>2, :c=>3, :d=>4, :e=>"Knox"}
+
+irb(main):047:0> my_hash[:c] = "Ruby"
+=> "Ruby"
+irb(main):048:0> p my_hash
+{:a=>1, :b=>2, :c=>"Ruby", :d=>4, :e=>"Knox"}
+=> {:a=>1, :b=>2, :c=>"Ruby", :d=>4, :e=>"Knox"}
+
+irb(main):049:0> my_hash.each { |key, value| puts "The key is #{key} and the value is #{value}"}
+The key is a and the value is 1
+The key is b and the value is 2
+The key is c and the value is Ruby
+The key is d and the value is 4
+The key is e and the value is Knox
+=> {:a=>1, :b=>2, :c=>"Ruby", :d=>4, :e=>"Knox"}
+
+irb(main):053:0> my_hash.select{|k, v| v.is_a?(String)}
+=> {:c=>"Ruby", :e=>"Knox"}
+
+irb(main):059:0> my_hash.each { |k,v| my_hash.delete(k) if v.is_a?(String)}
+=> {:a=>1, :b=>2, :d=>4}

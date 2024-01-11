@@ -1,0 +1,5 @@
+Modulo = is fully divible by
+
+true => 2 % 2 == 0 => 2 mod 2 leaves no remainder => 2 / 2 leaves no remainder => 2 is even
+
+false => 5 % 2 == 0 => 5 mod 2 leaves a remainder => 5 / 2 leaves a remainder => 5 is not even
